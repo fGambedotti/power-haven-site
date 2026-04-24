@@ -210,13 +210,39 @@
     size: '13'
   });
 
-  label('Wholesale price (£/MWh)', width - pad.right - 10, yPrice(data[46].price) - 10, {
+  var legendX2 = width - pad.right - 10;
+  var legendX1 = legendX2 - 22;
+  var legendTop = pad.top + 16;
+
+  svg.appendChild(
+    createNode('line', {
+      x1: String(legendX1),
+      y1: String(legendTop),
+      x2: String(legendX2),
+      y2: String(legendTop),
+      stroke: '#506070',
+      'stroke-width': '2'
+    })
+  );
+
+  label('Wholesale price (£/MWh)', legendX2, legendTop + 4, {
     anchor: 'end',
     color: '#506070',
     size: '12'
   });
 
-  label('Renewable generation (GW)', width - pad.right - 10, yRenewable(data[44].renewable) + 18, {
+  svg.appendChild(
+    createNode('line', {
+      x1: String(legendX1),
+      y1: String(legendTop + 22),
+      x2: String(legendX2),
+      y2: String(legendTop + 22),
+      stroke: '#8c877e',
+      'stroke-width': '2'
+    })
+  );
+
+  label('Renewable generation (GW)', legendX2, legendTop + 26, {
     anchor: 'end',
     color: '#8c877e',
     size: '12'

@@ -140,8 +140,8 @@
   background: #ffffff;
   color: var(--text-body);
   box-shadow: var(--shadow-card);
-  font-size: 0.74rem;
-  line-height: 1.45;
+  font-size: 11px;
+  line-height: 1.4;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.16s ease;
@@ -155,10 +155,10 @@
 }
 
 .hero-title {
-  font-size: clamp(3.25rem, 6.5vw, 6rem);
+  font-size: clamp(1.7rem, 3.2vw, 3rem);
   font-weight: 400;
-  line-height: 1.04;
-  margin-bottom: 24px;
+  line-height: 1.12;
+  margin-bottom: 20px;
 }
 
 .headline-line {
@@ -402,6 +402,13 @@
   align-items: start;
 }
 
+.demo-charts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
 .demo-controls,
 .demo-results {
   padding: 28px;
@@ -621,6 +628,10 @@
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 14px;
+}
+
+.demo-chart-card {
+  margin-top: 0;
 }
 
 .chart-head {
@@ -851,6 +862,10 @@
     grid-template-columns: 1fr;
   }
 
+  .demo-charts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .result-grid {
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   }
@@ -872,6 +887,10 @@
   .demo-controls,
   .demo-results {
     padding: 20px;
+  }
+
+  .demo-charts {
+    grid-template-columns: 1fr;
   }
 
   .brand-logo {
