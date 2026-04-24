@@ -25,7 +25,7 @@
 }
 
 .brand-logo {
-  width: 152px;
+  width: 76px;
   height: auto;
   display: block;
 }
@@ -404,7 +404,7 @@
 
 .demo-charts {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 24px;
   align-items: start;
 }
@@ -793,7 +793,7 @@
 }
 
 .site-footer .brand-logo {
-  width: 138px;
+  width: 69px;
 }
 
 .footer-grid {
@@ -863,7 +863,7 @@
   }
 
   .demo-charts {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   .result-grid {
@@ -894,11 +894,11 @@
   }
 
   .brand-logo {
-    width: 136px;
+    width: 68px;
   }
 
   .site-footer .brand-logo {
-    width: 126px;
+    width: 63px;
   }
 
   .result-grid {
